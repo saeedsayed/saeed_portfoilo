@@ -14,7 +14,7 @@ body{
 }
 img{
     max-width: 100%;
-    filter: grayscale();
+    filter: grayscale(50%);
 }
 li{
     list-style: none;
