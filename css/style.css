@@ -313,6 +313,10 @@ nav .cv {
         width: 100%;
     }
 
+        .Contact p i {
+        width: 25px;
+    }
+
     .Social {
         flex-direction: column-reverse;
         padding-top: 0;
