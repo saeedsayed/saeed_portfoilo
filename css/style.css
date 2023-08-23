@@ -278,6 +278,9 @@ nav .cv {
         flex-direction: column-reverse;
     }
 
+    .Home img {
+    height: auto;
+    }
 
     nav {
         width: 100%;
