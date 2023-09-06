@@ -16,7 +16,7 @@ body {
 
 img {
     max-width: 100%;
-    filter: grayscale();
+    vertical-align: middle;
 }
 
 li {
@@ -74,7 +74,7 @@ nav {
 }
 
 nav img {
-    opacity: .5;
+    opacity: .8;
     vertical-align: middle;
     width: 100%;
     height: 100px;
@@ -96,6 +96,10 @@ nav ul li a {
     align-items: center;
     padding: 22px 24px;
     transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
 }
 
 nav ul li a:hover {
@@ -142,6 +146,8 @@ nav .cv {
 
 .Home img {
     height: 600px;
+    filter: grayscale(.3);
+    -webkit-filter: grayscale(.3);
 }
 
 /* end home */
@@ -162,6 +168,7 @@ nav .cv {
     height: 40px;
     background-color: #222;
     margin-top: 5px;
+    line-height: 40px;
 }
 
 .About .progress .prog-holder .prog span {
@@ -169,14 +176,87 @@ nav .cv {
     height: 100%;
     display: block;
     text-align: center;
-    line-height: 40px;
     transition: 1s;
     overflow: hidden;
     font-weight: bold;
 }
 
+.prog-holder h3 i {
+    font-size: 1.5rem;
+}
+
+i.html {
+    color: #e34f26;
+    position: relative;
+    z-index: 1;
+}
+
+i.html::after {
+    content: '';
+    width: 13px;
+    height: 17px;
+    background-color: #fff;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    z-index: -1;
+}
+
+i.css {
+    color: #0062ff;
+    position: relative;
+}
+
+i.css::after {
+    content: '';
+    width: 13px;
+    height: 17px;
+    background-color: #fff;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    z-index: -1;
+}
+
+i.js {
+    color: #e1c80d;
+    background-color: #fff;
+    line-height: 18px;
+}
+
+.tools {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 35px;
+    margin-bottom: 25px;
+}
+
+.tool {
+    width: 20%;
+    min-width: 140px;
+    text-align: center;
+    padding-inline: 15px;
+    flex-grow: 0;
+}
+
+.tool i {
+    font-size: 70px;
+    margin-bottom: 12px;
+}
+
+.tool img {
+    height: 70px;
+    margin-bottom: 12px;
+}
+
+.tool-name {
+    font-size: 30px;
+    text-transform: capitalize;
+}
+
 /* end about */
-/* start porject */
+/* start project */
 .Project .Projects {
     display: flex;
     flex-wrap: wrap;
@@ -227,7 +307,7 @@ nav .cv {
     letter-spacing: 5px;
 }
 
-/* end porject */
+/* end project */
 /* start contact */
 .Contact {
     padding: 70px 0;
@@ -261,16 +341,48 @@ nav .cv {
 
 .Social ul li a i {
     color: #666;
+    line-height: 27px;
     transition: .5s;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
-.Social ul li a i:hover {
-    color: #fff;
+i.facebook:hover {
+    color: #1877f2;
+    background-color: #fff;
+}
+
+i.linkedin:hover {
+    color: #0a66c2;
+    background-color: #fff;
+}
+
+i.github:hover {
+    color: #333;
+    background-color: #fff;
+}
+
+i.whatsapp:hover {
+    color: #25d366;
+    background-color: #fff;
+}
+
+i.telegram:hover {
+    color: #0088cc;
+    background-color: #fff;
+}
+
+i.instagram:hover {
+    color: #fd1d1d;
+    background-color: #fff;
 }
 
 /* end social */
 /* start */
-@media (max-width:600px) {
+@media screen and (max-width: 768px) {
     .container {
         margin: 0;
     }
@@ -282,8 +394,9 @@ nav .cv {
     }
 
     .Home img {
-    height: auto;
+        height: auto;
     }
+
 
     nav {
         width: 100%;
@@ -292,6 +405,11 @@ nav .cv {
 
     nav .cv {
         display: none;
+    }
+
+    .cv {
+        margin: auto;
+        display: block;
     }
 
     nav img {
@@ -316,17 +434,34 @@ nav .cv {
         width: 100%;
     }
 
-    .Contact p i {
-        width: 25px;
-    }
-
     .Social {
         flex-direction: column-reverse;
         padding-top: 0;
         align-items: center;
     }
 
+    .About .progress .prog-holder .prog {
+        height: 25px;
+        line-height: 25px;
+    }
+
     .Social ul {
         text-align: center;
+    }
+
+    .Contact p i {
+        width: 25px;
+    }
+
+    .tool i {
+        font-size: 50px;
+    }
+
+    .tool img {
+        height: 50px;
+    }
+
+    .tool-name {
+        font-size: 20px;
     }
 }
