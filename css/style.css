@@ -129,10 +129,7 @@ nav .cv {
 /* end nav*/
 /* start home */
 .Home {
-    padding: 100px 0;
-    display: flex;
-    align-items: center;
-    gap: 60px;
+    text-align:center;
 }
 
 .Home h1 {
@@ -146,8 +143,8 @@ nav .cv {
 
 .Home img {
     height: 600px;
-    filter: grayscale(.3);
-    -webkit-filter: grayscale(.3);
+    filter: grayscale(.3) drop-shadow(10px 10px 10px white);
+    -webkit-filter: grayscale(.3) drop-shadow(10px 10px 10px white);
 }
 
 /* end home */
@@ -388,9 +385,8 @@ i.instagram:hover {
     }
 
     .Home {
-        padding-bottom: 0;
-        gap: 0;
-        flex-direction: column-reverse;
+        padding-top:100px;
+        
     }
 
     .Home img {
