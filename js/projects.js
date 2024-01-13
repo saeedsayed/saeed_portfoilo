@@ -42,4 +42,10 @@ export let projectsArr = [
     technologyUsed: ["HTML5", "CSS3", "Bootstrap", "JS", "responsive-design"],
     projectLink: "https://saeedsayed.github.io/photo-edtor/",
   },
+  {
+    thumbnails: "assets/img/projects-imgs/weather-app.jpg",
+    projectName: "weather app",
+    technologyUsed: ["HTML5", "CSS3", "JS","supabase","axios", "responsive-design"],
+    projectLink: "https://saeedsayed.github.io/weather/",
+  },
 ];
