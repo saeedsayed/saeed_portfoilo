@@ -68,7 +68,7 @@ formEmail.addEventListener("submit", (event) => {
 });
 
 window.onscroll = (_) => {
-  if (scrollY >= skill.offsetTop - 150) {
+  if (scrollY >= skill.offsetTop - 90) {
     prog.forEach((p) => {
       p.style.width = p.dataset.prog;
       p.innerHTML = p.dataset.prog;
