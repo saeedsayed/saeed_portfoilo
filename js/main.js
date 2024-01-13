@@ -79,7 +79,7 @@ window.onscroll = (_) => {
     });
   }
   switch (true) {
-    case scrollY >= contact.offsetTop - 150:
+    case scrollY >= contact.offsetTop - 90:
       navLinks.forEach((proj) => {
         proj.classList.remove("active");
         proj.classList.contains("nav__link--contact")
@@ -87,7 +87,7 @@ window.onscroll = (_) => {
           : "";
       });
       break;
-    case scrollY >= project.offsetTop - 150:
+    case scrollY >= project.offsetTop - 90:
       navLinks.forEach((proj) => {
         proj.classList.remove("active");
         proj.classList.contains("nav__link--project")
@@ -95,7 +95,7 @@ window.onscroll = (_) => {
           : "";
       });
       break;
-    case scrollY >= skill.offsetTop - 150:
+    case scrollY >= skill.offsetTop - 90:
       navLinks.forEach((proj) => {
         proj.classList.remove("active");
         proj.classList.contains("nav__link--about")
@@ -103,7 +103,7 @@ window.onscroll = (_) => {
           : "";
       });
       break;
-    case scrollY >= home.offsetTop - 150:
+    case scrollY >= home.offsetTop - 90:
       navLinks.forEach((proj) => {
         proj.classList.remove("active");
         proj.classList.contains("nav__link--home")
